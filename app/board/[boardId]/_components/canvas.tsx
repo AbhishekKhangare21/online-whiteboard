@@ -50,8 +50,7 @@ interface CanvasProps {
 }
 
 export const Canvas = ({ boardId }: CanvasProps) => {
-  // const layerIds = useStorage((root) => root.layerIds);
-  const layerIds = useStorage((root): { layerIds: string[] } => root.layerIds);
+  const layerIds = useStorage((root) => root.layerIds);
 
   const pencilDraft = useSelf((me) => me.presence.pencilDraft);
   const [canvasState, setCanvasState] = useState<CanvasState>({
